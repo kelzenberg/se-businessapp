@@ -34,7 +34,7 @@ public interface CalculatorLogicIntf extends ControllerIntf {
             {".", Token.K_DOT},
             {"m", Token.K_VAT},
             {"t", Token.K_1000},
-    }
+    };
 
 
     /**
