@@ -1,46 +1,68 @@
 package com.businessapp.logic;
 
+import com.businessapp.Component;
+import com.businessapp.ControllerIntf;
+import com.businessapp.fxgui.CalculatorGUI_Intf;
+import com.businessapp.fxgui.CalculatorGUI_Intf.Token;
+
+
+import com.businessapp.Component;
+import com.businessapp.ControllerIntf;
+import com.businessapp.fxgui.CalculatorGUI_Intf;
+import com.businessapp.fxgui.CalculatorGUI_Intf.Token;
+
+import static com.businessapp.fxgui.CalculatorGUI_Intf.KeyLabels;
 
 /**
- * ********************************************************************************
- * Local implementation class (unfinished) of calculator logic.
- * <p>
- * Instance is invoked with public interface method nextToken( Token tok ) passing
- * an input token that is created at the UI from a key event. Input tokens are defined
- * in CalculatorIntf and comprised of digits [0-9,.], numeric operators [+,-,*,/,VAT]
- * and control tokens [\backspace,=,C,CE,K_1000].
- * <p>
- * Outputs are are passed through display properties:<p>
- * - CalculatorIntf.DISPLAY for numbers and<p>
- * - CalculatorIntf.SIDEAREA for VAT calculations.
- * <p>
- * Method(s):
- * - public void nextToken( Token tok );	;process next token from UI controller
+ * Implementation of CalculatorLogicIntf that only displays Tokens
+ * received from the Calculator UI.
+ *
  */
 class CalculatorLogic implements CalculatorLogicIntf {
 
+    private CalculatorGUI_Intf view;
+    private final double VAT_RATE = 19.0;
     private StringBuffer dsb = new StringBuffer();
 
     /**
      * Local constructor.
      */
     CalculatorLogic() {
-        nextToken(Token.K_C);        // reset buffers
+    }
+
+    @Override
+    public void inject(ControllerIntf dep) {
+        this.view = (CalculatorGUI_Intf) dep;
+    }
+
+    @Override
+    public void inject(Component parent) {
+
+    }
+
+    @Override
+    public void start() {
+        nextToken(Token.K_C);        // reset calculator
+    }
+
+    @Override
+    public void stop() {
+
     }
 
     /**
-     * Process next token from UI controller. Tokens are defined in CalculatorIntf.java
+     * Process next token received from UI controller.
      * <p>
-     * Outputs are are passed through display properties:
-     * - CalculatorIntf.DISPLAY for numbers and
-     * - CalculatorIntf.SIDEAREA for VAT calculations.
+     * Tokens are transformed into output into UI properties:
+     * 	- CalculatorIntf.DISPLAY for numbers and
+     * 	- CalculatorIntf.SIDEAREA for VAT calculations.
      * <p>
-     *
      * @param tok the next Token passed from the UI, CalculatorViewController.
      */
     public void nextToken(Token tok) {
         // switch , or . always to .
-        String d = tok == Token.K_DOT ? "." : CalculatorLogicIntf.KeyLabels[tok.ordinal()];
+        String d = tok == Token.K_DOT ? "." : KeyLabels[tok.ordinal()];
+        cancelCalc:
         try {
             switch (tok) {
                 case K_0:
@@ -109,15 +131,21 @@ class CalculatorLogic implements CalculatorLogicIntf {
                         String math = dsb.toString();
                         dsb.setLength(0);
                         appendBuffer(calculate(math).toString());
-                        CalculatorLogicIntf.SIDEAREA.set(CalculatorLogicIntf.SIDEAREA.getValue() + math + "\n");
+                        view.writeSideArea(CalculatorLogicIntf.SIDEAREA.getValue() + math + "\n");
                         break;
                     }
                 case K_VAT:
-                    double vat = Double.parseDouble(dsb.toString());
+                    double vat = 0;
+                    try {
+                        vat = Double.parseDouble(dsb.toString());
+                    } catch (NumberFormatException e){
+                        view.writeTextArea("NaN");
+                        break cancelCalc;
+                    }
                     double net = Math.round((vat / (100 + VAT_RATE) * 100) * 100.0) / 100.0;
                     double vatnet = Math.round((vat - net) * 100.0) / 100.0;
 
-                    CalculatorLogicIntf.SIDEAREA.set(
+                    view.writeSideArea(
                             "Brutto:  " + vat + "\n"
                                     + VAT_RATE + "% MwSt:  " + vatnet + "\n"
                                     + "Netto:  " + net);
@@ -133,7 +161,7 @@ class CalculatorLogic implements CalculatorLogicIntf {
                     dsb.setLength(Math.max(0, dsb.length() - 1));
                     break;
                 case K_C:
-                    CalculatorLogicIntf.SIDEAREA.set("");
+                    view.writeSideArea("");
                     break;
                 case K_CE:
                     dsb.delete(0, dsb.length());
@@ -142,10 +170,10 @@ class CalculatorLogic implements CalculatorLogicIntf {
             }
 
             String display = dsb.length() == 0 ? "0" : dsb.toString();
-            CalculatorLogicIntf.DISPLAY.set(display);
+            view.writeTextArea(display);
 
         } catch (ArithmeticException e) {
-            CalculatorLogicIntf.DISPLAY.set(e.getMessage());
+            view.writeTextArea(e.getMessage());
         }
         System.out.println("Buffer reads: [" + dsb.toString() + "]");
     }
@@ -172,16 +200,16 @@ class CalculatorLogic implements CalculatorLogicIntf {
             return false;
         } else {
             String[][] rules = new String[][]{
-                /*    INPUT  //           PREVIOUS SYMBOL                */
-                /* 0: empty */{"", "+", "-", "*", "/", ".", "(", ")", "="},
-                /* 1:   +   */{"", "+", "-", "*", "/", ".", "(", "="},
-                /* 2:   -   */{"-", ".", "="},
-                /* 3:   *   */{"", "*", "+", "-", "/", ".", "(", "="},
-                /* 4:   /   */{"", "/", "+", "-", "*", ".", "(", "="},
-                /* 5:   .   */{"", ".", "+", "-", "*", "/", "(", ")", "="},
-                /* 6:   (   */{".", ")", "="},
-                /* 7:   )   */{"", "+", "-", "*", "/", ".", "(", "="},
-                /* 8:   =   */{"", "=", "+", "-", "*", "/", ".", "("}
+                    /*    INPUT  //           PREVIOUS SYMBOL                */
+                    /* 0: empty */{"", "+", "-", "*", "/", ".", "(", ")", "="},
+                    /* 1:   +   */{"", "+", "-", "*", "/", ".", "(", "="},
+                    /* 2:   -   */{"-", ".", "="},
+                    /* 3:   *   */{"", "*", "+", "-", "/", ".", "(", "="},
+                    /* 4:   /   */{"", "/", "+", "-", "*", ".", "(", "="},
+                    /* 5:   .   */{"", ".", "+", "-", "*", "/", "(", ")", "="},
+                    /* 6:   (   */{".", ")", "="},
+                    /* 7:   )   */{"", "+", "-", "*", "/", ".", "(", "="},
+                    /* 8:   =   */{"", "=", "+", "-", "*", "/", ".", "("}
             };
 
             // define consequence of input-symbol, depending on previous input
