@@ -24,7 +24,7 @@
                                     </image>
                                 </ImageView>
                                 <Button layoutX="322.0" layoutY="247.0" mnemonicParsing="false" onMouseReleased="#exitButton" prefHeight="25.0" prefWidth="76.0" text="Exit" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0" />
-                                <Label layoutX="8.0" layoutY="237.0" text="Videoverleih 9000" textFill="WHITE" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="8.0">
+                                <Label layoutX="8.0" layoutY="237.0" text="Videoverleih 9000" textFill="#4898c7" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="8.0">
                                     <font>
                                         <Font name="Roboto Condensed Light" size="37.0" />
                                     </font>
