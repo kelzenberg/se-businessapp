@@ -1,7 +1,7 @@
 {
 	"_type": "Project",
 	"_id": "AAAAAAFF+h6SjaM2Hec=",
-	"name": "Untitled",
+	"title": "Untitled",
 	"ownedElements": [
 		{
 			"_type": "UMLModel",
@@ -9,7 +9,7 @@
 			"_parent": {
 				"$ref": "AAAAAAFF+h6SjaM2Hec="
 			},
-			"name": "Use Cases & Business Objects",
+			"title": "Use Cases & Business Objects",
 			"ownedElements": [
 				{
 					"_type": "UMLUseCaseDiagram",
@@ -17,7 +17,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivi/qPAcIXTk="
 					},
-					"name": "Use Cases",
+					"title": "Use Cases",
 					"ownedElements": [
 						{
 							"_type": "UMLUseCaseSubject",
@@ -25,7 +25,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFivi/qPQcJP9A="
 							},
-							"name": "Store (System)",
+							"title": "Store (System)",
 							"ownedElements": [
 								{
 									"_type": "UMLUseCase",
@@ -33,7 +33,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFivjGQiwcT8Q4="
 									},
-									"name": "manage sortiment, offer, rental & customers",
+									"title": "manage sortiment, offer, rental & customers",
 									"ownedElements": [
 										{
 											"_type": "UMLDependency",
@@ -41,7 +41,7 @@
 											"_parent": {
 												"$ref": "AAAAAAFivjt8An3eukw="
 											},
-											"name": "depends",
+											"title": "depends",
 											"source": {
 												"$ref": "AAAAAAFivjt8An3eukw="
 											},
@@ -56,7 +56,7 @@
 											"_parent": {
 												"$ref": "AAAAAAFivjt8An3eukw="
 											},
-											"name": "depends",
+											"title": "depends",
 											"source": {
 												"$ref": "AAAAAAFivjt8An3eukw="
 											},
@@ -71,7 +71,7 @@
 											"_parent": {
 												"$ref": "AAAAAAFivjt8An3eukw="
 											},
-											"name": "depends",
+											"title": "depends",
 											"source": {
 												"$ref": "AAAAAAFivjt8An3eukw="
 											},
@@ -86,7 +86,7 @@
 											"_parent": {
 												"$ref": "AAAAAAFivjt8An3eukw="
 											},
-											"name": "depends",
+											"title": "depends",
 											"source": {
 												"$ref": "AAAAAAFivjt8An3eukw="
 											},
@@ -107,7 +107,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFivjGQiwcT8Q4="
 									},
-									"name": "provide products",
+									"title": "provide products",
 									"visibility": "public",
 									"isAbstract": false,
 									"isFinalSpecialization": false,
@@ -119,7 +119,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFivjGQiwcT8Q4="
 									},
-									"name": "check statistics",
+									"title": "check statistics",
 									"visibility": "public",
 									"isAbstract": false,
 									"isFinalSpecialization": false,
@@ -131,7 +131,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFivjGQiwcT8Q4="
 									},
-									"name": "Owner",
+									"title": "Owner",
 									"ownedElements": [
 										{
 											"_type": "UMLAssociation",
@@ -190,7 +190,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFivjGQiwcT8Q4="
 									},
-									"name": "Publisher",
+									"title": "Publisher",
 									"ownedElements": [
 										{
 											"_type": "UMLAssociation",
@@ -294,7 +294,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFivjGQiwcT8Q4="
 									},
-									"name": "pick up (reserved) product",
+									"title": "pick up (reserved) product",
 									"ownedElements": [
 										{
 											"_type": "UMLDependency",
@@ -302,7 +302,7 @@
 											"_parent": {
 												"$ref": "AAAAAAFivl5571CizNg="
 											},
-											"name": "depends",
+											"title": "depends",
 											"source": {
 												"$ref": "AAAAAAFivl5571CizNg="
 											},
@@ -317,7 +317,7 @@
 											"_parent": {
 												"$ref": "AAAAAAFivl5571CizNg="
 											},
-											"name": "depends",
+											"title": "depends",
 											"source": {
 												"$ref": "AAAAAAFivl5571CizNg="
 											},
@@ -338,7 +338,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFivjGQiwcT8Q4="
 									},
-									"name": "return product",
+									"title": "return product",
 									"visibility": "public",
 									"isAbstract": false,
 									"isFinalSpecialization": false,
@@ -350,7 +350,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFivjGQiwcT8Q4="
 									},
-									"name": "damage/loss report",
+									"title": "damage/loss report",
 									"visibility": "public",
 									"isAbstract": false,
 									"isFinalSpecialization": false,
@@ -362,7 +362,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFivjGQiwcT8Q4="
 									},
-									"name": "pay for product",
+									"title": "pay for product",
 									"ownedElements": [
 										{
 											"_type": "UMLAssociation",
@@ -421,7 +421,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFivjGQiwcT8Q4="
 									},
-									"name": "manage system",
+									"title": "manage system",
 									"ownedElements": [
 										{
 											"_type": "UMLAssociation",
@@ -480,7 +480,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFivjGQiwcT8Q4="
 									},
-									"name": "Administrator",
+									"title": "Administrator",
 									"ownedElements": [
 										{
 											"_type": "UMLAssociation",
@@ -542,7 +542,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFivi/qPQcJP9A="
 							},
-							"name": "Website",
+							"title": "Website",
 							"ownedElements": [
 								{
 									"_type": "UMLUseCase",
@@ -550,7 +550,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFivjH7fAcvhnY="
 									},
-									"name": "check sortiment & offer",
+									"title": "check sortiment & offer",
 									"visibility": "public",
 									"isAbstract": false,
 									"isFinalSpecialization": false,
@@ -562,7 +562,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFivjH7fAcvhnY="
 									},
-									"name": "consume news",
+									"title": "consume news",
 									"visibility": "public",
 									"isAbstract": false,
 									"isFinalSpecialization": false,
@@ -574,7 +574,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFivjH7fAcvhnY="
 									},
-									"name": "consume personalized news",
+									"title": "consume personalized news",
 									"ownedElements": [
 										{
 											"_type": "UMLExtend",
@@ -602,7 +602,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFivjH7fAcvhnY="
 									},
-									"name": "reserve product",
+									"title": "reserve product",
 									"visibility": "public",
 									"isAbstract": false,
 									"isFinalSpecialization": false,
@@ -614,7 +614,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFivjH7fAcvhnY="
 									},
-									"name": "pay online for product",
+									"title": "pay online for product",
 									"visibility": "public",
 									"isAbstract": false,
 									"isFinalSpecialization": false,
@@ -626,7 +626,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFivjH7fAcvhnY="
 									},
-									"name": "manage reservations & bookings",
+									"title": "manage reservations & bookings",
 									"ownedElements": [
 										{
 											"_type": "UMLInclude",
@@ -668,7 +668,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFivjH7fAcvhnY="
 									},
-									"name": "contact support",
+									"title": "contact support",
 									"ownedElements": [
 										{
 											"_type": "UMLAssociation",
@@ -727,7 +727,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFivjH7fAcvhnY="
 									},
-									"name": "Visitor",
+									"title": "Visitor",
 									"ownedElements": [
 										{
 											"_type": "UMLAssociation",
@@ -831,7 +831,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFivjH7fAcvhnY="
 									},
-									"name": "Customer",
+									"title": "Customer",
 									"ownedElements": [
 										{
 											"_type": "UMLGeneralization",
@@ -16339,7 +16339,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivi/qPAcIXTk="
 					},
-					"name": "Business Objects",
+					"title": "Business Objects",
 					"ownedElements": [
 						{
 							"_type": "UMLClass",
@@ -16347,7 +16347,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFivnv3bVYwP/Q="
 							},
-							"name": "Admin",
+							"title": "Admin",
 							"ownedElements": [
 								{
 									"_type": "UMLClass",
@@ -16355,7 +16355,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFivopsCVc07Bw="
 									},
-									"name": "Rental",
+									"title": "Rental",
 									"ownedElements": [
 										{
 											"_type": "UMLAssociation",
@@ -16436,7 +16436,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFivnv3bVYwP/Q="
 							},
-							"name": "Publisher",
+							"title": "Publisher",
 							"ownedElements": [
 								{
 									"_type": "UMLAssociation",
@@ -16450,7 +16450,7 @@
 										"_parent": {
 											"$ref": "AAAAAAFivpFeCGE0DY0="
 										},
-										"name": "1",
+										"title": "1",
 										"reference": {
 											"$ref": "AAAAAAFivotPbl/s1zE="
 										},
@@ -16469,7 +16469,7 @@
 										"_parent": {
 											"$ref": "AAAAAAFivpFeCGE0DY0="
 										},
-										"name": "1..*",
+										"title": "1..*",
 										"reference": {
 											"$ref": "AAAAAAFivoudwGBEJNU="
 										},
@@ -16498,7 +16498,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFivnv3bVYwP/Q="
 							},
-							"name": "Customer",
+							"title": "Customer",
 							"ownedElements": [
 								{
 									"_type": "UMLAssociation",
@@ -16558,7 +16558,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFivnv3bVYwP/Q="
 							},
-							"name": "Product",
+							"title": "Product",
 							"ownedElements": [
 								{
 									"_type": "UMLClass",
@@ -16566,7 +16566,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFivoudwGBEJNU="
 									},
-									"name": "Rental",
+									"title": "Rental",
 									"ownedElements": [
 										{
 											"_type": "UMLAssociation",
@@ -16580,7 +16580,7 @@
 												"_parent": {
 													"$ref": "AAAAAAFivpXuc27zhRc="
 												},
-												"name": "*",
+												"title": "*",
 												"reference": {
 													"$ref": "AAAAAAFivoudwGBEJNU="
 												},
@@ -16599,7 +16599,7 @@
 												"_parent": {
 													"$ref": "AAAAAAFivpXuc27zhRc="
 												},
-												"name": "1",
+												"title": "1",
 												"reference": {
 													"$ref": "AAAAAAFivouGhGAZztU="
 												},
@@ -16649,7 +16649,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFivnv3bVYwP/Q="
 							},
-							"name": "Reservation",
+							"title": "Reservation",
 							"ownedElements": [
 								{
 									"_type": "UMLGeneralization",
@@ -16657,7 +16657,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFivovQG2BvdU4="
 									},
-									"name": "0..1",
+									"title": "0..1",
 									"source": {
 										"$ref": "AAAAAAFivovQG2BvdU4="
 									},
@@ -19434,7 +19434,7 @@
 			"_parent": {
 				"$ref": "AAAAAAFF+h6SjaM2Hec="
 			},
-			"name": "Business Process",
+			"title": "Business Process",
 			"ownedElements": [
 				{
 					"_type": "UMLActivityDiagram",
@@ -19442,7 +19442,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "Business Processes",
+					"title": "Business Processes",
 					"visible": true,
 					"defaultDiagram": false,
 					"ownedViews": [
@@ -25183,7 +25183,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "find reservations for name",
+											"text": "find reservations for title",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -33980,7 +33980,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "InitialNode1",
+					"title": "InitialNode1",
 					"visibility": "public"
 				},
 				{
@@ -33989,7 +33989,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "ActivityFinalNode1",
+					"title": "ActivityFinalNode1",
 					"visibility": "public"
 				},
 				{
@@ -33998,7 +33998,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "choose product",
+					"title": "choose product",
 					"visibility": "public",
 					"kind": "opaque",
 					"isLocallyReentrant": false,
@@ -34010,7 +34010,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "fill in personal details",
+					"title": "fill in personal details",
 					"visibility": "public",
 					"kind": "opaque",
 					"isLocallyReentrant": false,
@@ -34022,7 +34022,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "check details",
+					"title": "check details",
 					"visibility": "public",
 					"kind": "opaque",
 					"isLocallyReentrant": false,
@@ -34034,7 +34034,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "DecisionNode1",
+					"title": "DecisionNode1",
 					"visibility": "public"
 				},
 				{
@@ -34043,7 +34043,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "choose reservation",
+					"title": "choose reservation",
 					"visibility": "public",
 					"kind": "opaque",
 					"isLocallyReentrant": false,
@@ -34055,7 +34055,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "DecisionNode2",
+					"title": "DecisionNode2",
 					"visibility": "public"
 				},
 				{
@@ -34064,7 +34064,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "fill in payment details",
+					"title": "fill in payment details",
 					"visibility": "public",
 					"kind": "opaque",
 					"isLocallyReentrant": false,
@@ -34076,7 +34076,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "confirm reservation",
+					"title": "confirm reservation",
 					"visibility": "public",
 					"kind": "opaque",
 					"isLocallyReentrant": false,
@@ -34088,7 +34088,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "MergeNode1",
+					"title": "MergeNode1",
 					"visibility": "public"
 				},
 				{
@@ -34097,7 +34097,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "DecisionNode3",
+					"title": "DecisionNode3",
 					"visibility": "public"
 				},
 				{
@@ -34106,7 +34106,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "DecisionNode4",
+					"title": "DecisionNode4",
 					"visibility": "public"
 				},
 				{
@@ -34115,7 +34115,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "DecisionNode5",
+					"title": "DecisionNode5",
 					"visibility": "public"
 				},
 				{
@@ -34124,7 +34124,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "FlowFinalNode1",
+					"title": "FlowFinalNode1",
 					"visibility": "public"
 				},
 				{
@@ -34133,7 +34133,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "receive confirmation about reservation",
+					"title": "receive confirmation about reservation",
 					"visibility": "public",
 					"kind": "opaque",
 					"isLocallyReentrant": false,
@@ -34145,7 +34145,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "MergeNode2",
+					"title": "MergeNode2",
 					"visibility": "public"
 				},
 				{
@@ -34154,7 +34154,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "MergeNode3",
+					"title": "MergeNode3",
 					"visibility": "public"
 				},
 				{
@@ -34163,7 +34163,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "DecisionNode6",
+					"title": "DecisionNode6",
 					"visibility": "public"
 				},
 				{
@@ -34172,7 +34172,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "DecisionNode7",
+					"title": "DecisionNode7",
 					"visibility": "public"
 				},
 				{
@@ -34181,7 +34181,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "choose time & date",
+					"title": "choose time & date",
 					"visibility": "public",
 					"kind": "opaque",
 					"isLocallyReentrant": false,
@@ -34193,7 +34193,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "check details",
+					"title": "check details",
 					"visibility": "public",
 					"kind": "opaque",
 					"isLocallyReentrant": false,
@@ -34205,7 +34205,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "InitialNode2",
+					"title": "InitialNode2",
 					"visibility": "public"
 				},
 				{
@@ -34214,7 +34214,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "fill in reservation number",
+					"title": "fill in reservation number",
 					"visibility": "public",
 					"kind": "opaque",
 					"isLocallyReentrant": false,
@@ -34226,7 +34226,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "find reservations for name",
+					"title": "find reservations for title",
 					"visibility": "public",
 					"kind": "opaque",
 					"isLocallyReentrant": false,
@@ -34238,7 +34238,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "ActivityFinalNode3",
+					"title": "ActivityFinalNode3",
 					"visibility": "public"
 				},
 				{
@@ -34247,7 +34247,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "DecisionNode8",
+					"title": "DecisionNode8",
 					"visibility": "public"
 				},
 				{
@@ -34256,7 +34256,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "cancel reservation",
+					"title": "cancel reservation",
 					"visibility": "public",
 					"kind": "opaque",
 					"isLocallyReentrant": false,
@@ -34268,7 +34268,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "DecisionNode9",
+					"title": "DecisionNode9",
 					"visibility": "public"
 				},
 				{
@@ -34277,7 +34277,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "refund payment",
+					"title": "refund payment",
 					"visibility": "public",
 					"kind": "opaque",
 					"isLocallyReentrant": false,
@@ -34289,7 +34289,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "confirm cancellation",
+					"title": "confirm cancellation",
 					"visibility": "public",
 					"kind": "opaque",
 					"isLocallyReentrant": false,
@@ -34301,7 +34301,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "MergeNode4",
+					"title": "MergeNode4",
 					"visibility": "public"
 				},
 				{
@@ -34310,7 +34310,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "DecisionNode10",
+					"title": "DecisionNode10",
 					"visibility": "public"
 				},
 				{
@@ -34319,7 +34319,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "FlowFinalNode2",
+					"title": "FlowFinalNode2",
 					"visibility": "public"
 				},
 				{
@@ -34328,7 +34328,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "InitialNode3",
+					"title": "InitialNode3",
 					"visibility": "public"
 				},
 				{
@@ -34337,7 +34337,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "get reservation number",
+					"title": "get reservation number",
 					"visibility": "public",
 					"kind": "opaque",
 					"isLocallyReentrant": false,
@@ -34349,7 +34349,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "check reservation number",
+					"title": "check reservation number",
 					"visibility": "public",
 					"kind": "opaque",
 					"isLocallyReentrant": false,
@@ -34361,7 +34361,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "DecisionNode11",
+					"title": "DecisionNode11",
 					"visibility": "public"
 				},
 				{
@@ -34370,7 +34370,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "get Product",
+					"title": "get Product",
 					"visibility": "public",
 					"kind": "opaque",
 					"isLocallyReentrant": false,
@@ -34382,7 +34382,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "let customer sign receipt",
+					"title": "let customer sign receipt",
 					"visibility": "public",
 					"kind": "opaque",
 					"isLocallyReentrant": false,
@@ -34394,7 +34394,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "MergeNode5",
+					"title": "MergeNode5",
 					"visibility": "public"
 				},
 				{
@@ -34403,7 +34403,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "mark product as lent",
+					"title": "mark product as lent",
 					"visibility": "public",
 					"kind": "opaque",
 					"isLocallyReentrant": false,
@@ -34415,7 +34415,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "hand out product",
+					"title": "hand out product",
 					"visibility": "public",
 					"kind": "opaque",
 					"isLocallyReentrant": false,
@@ -34427,7 +34427,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "ActivityFinalNode2",
+					"title": "ActivityFinalNode2",
 					"visibility": "public"
 				},
 				{
@@ -34436,7 +34436,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "InitialNode4",
+					"title": "InitialNode4",
 					"visibility": "public"
 				},
 				{
@@ -34445,7 +34445,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "receive product",
+					"title": "receive product",
 					"visibility": "public",
 					"kind": "opaque",
 					"isLocallyReentrant": false,
@@ -34457,7 +34457,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "find product in system",
+					"title": "find product in system",
 					"visibility": "public",
 					"kind": "opaque",
 					"isLocallyReentrant": false,
@@ -34469,7 +34469,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "mark product as returned",
+					"title": "mark product as returned",
 					"visibility": "public",
 					"kind": "opaque",
 					"isLocallyReentrant": false,
@@ -34481,7 +34481,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "sort product",
+					"title": "sort product",
 					"visibility": "public",
 					"kind": "opaque",
 					"isLocallyReentrant": false,
@@ -34493,7 +34493,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "ActivityFinalNode4",
+					"title": "ActivityFinalNode4",
 					"visibility": "public"
 				},
 				{
@@ -34502,7 +34502,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "InitialNode5",
+					"title": "InitialNode5",
 					"visibility": "public"
 				},
 				{
@@ -34511,7 +34511,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "identify lost/broken product",
+					"title": "identify lost/broken product",
 					"visibility": "public",
 					"kind": "opaque",
 					"isLocallyReentrant": false,
@@ -34523,7 +34523,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "mark product as lost/broken",
+					"title": "mark product as lost/broken",
 					"visibility": "public",
 					"kind": "opaque",
 					"isLocallyReentrant": false,
@@ -34535,7 +34535,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "fine customer",
+					"title": "fine customer",
 					"visibility": "public",
 					"kind": "opaque",
 					"isLocallyReentrant": false,
@@ -34547,7 +34547,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "receive payment",
+					"title": "receive payment",
 					"visibility": "public",
 					"kind": "opaque",
 					"isLocallyReentrant": false,
@@ -34559,7 +34559,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "receive fine",
+					"title": "receive fine",
 					"visibility": "public",
 					"kind": "opaque",
 					"isLocallyReentrant": false,
@@ -34571,7 +34571,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "order replacement (optional)",
+					"title": "order replacement (optional)",
 					"visibility": "public",
 					"kind": "opaque",
 					"isLocallyReentrant": false,
@@ -34583,7 +34583,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "ActivityFinalNode5",
+					"title": "ActivityFinalNode5",
 					"visibility": "public"
 				}
 			],
@@ -34650,7 +34650,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "reservation only",
+					"title": "reservation only",
 					"source": {
 						"$ref": "AAAAAAFivqlTyIJl3u0="
 					},
@@ -34679,7 +34679,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "input correct",
+					"title": "input correct",
 					"source": {
 						"$ref": "AAAAAAFivqzaLIOLL28="
 					},
@@ -34708,7 +34708,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "not confirmed",
+					"title": "not confirmed",
 					"source": {
 						"$ref": "AAAAAAFivq5SI4PUCXw="
 					},
@@ -34723,7 +34723,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "confirmed",
+					"title": "confirmed",
 					"source": {
 						"$ref": "AAAAAAFivq5SI4PUCXw="
 					},
@@ -34752,7 +34752,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "input false",
+					"title": "input false",
 					"source": {
 						"$ref": "AAAAAAFivqbXNIG017I="
 					},
@@ -34781,7 +34781,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "input correct",
+					"title": "input correct",
 					"source": {
 						"$ref": "AAAAAAFivqbXNIG017I="
 					},
@@ -34796,7 +34796,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "change reservation",
+					"title": "change reservation",
 					"source": {
 						"$ref": "AAAAAAFivq7uUIPrFfI="
 					},
@@ -34825,7 +34825,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "change payment",
+					"title": "change payment",
 					"source": {
 						"$ref": "AAAAAAFivq7uUIPrFfI="
 					},
@@ -34840,7 +34840,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "input false",
+					"title": "input false",
 					"source": {
 						"$ref": "AAAAAAFivqzaLIOLL28="
 					},
@@ -34855,7 +34855,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "online payment",
+					"title": "online payment",
 					"source": {
 						"$ref": "AAAAAAFivqlTyIJl3u0="
 					},
@@ -34996,7 +34996,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "no reservation found",
+					"title": "no reservation found",
 					"source": {
 						"$ref": "AAAAAAFi4jujBgP/TY8="
 					},
@@ -35011,7 +35011,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "reservation found",
+					"title": "reservation found",
 					"source": {
 						"$ref": "AAAAAAFi4jujBgP/TY8="
 					},
@@ -35040,7 +35040,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "was paid for",
+					"title": "was paid for",
 					"source": {
 						"$ref": "AAAAAAFi4jyUJgRXSoU="
 					},
@@ -35055,7 +35055,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "not paid for",
+					"title": "not paid for",
 					"source": {
 						"$ref": "AAAAAAFi4jyUJgRXSoU="
 					},
@@ -35112,7 +35112,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "not confirmed",
+					"title": "not confirmed",
 					"source": {
 						"$ref": "AAAAAAFi4j5WKgUmnbI="
 					},
@@ -35127,7 +35127,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "confirmed",
+					"title": "confirmed",
 					"source": {
 						"$ref": "AAAAAAFi4j5WKgUmnbI="
 					},
@@ -35170,7 +35170,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "product found",
+					"title": "product found",
 					"source": {
 						"$ref": "AAAAAAFi4lJ7hgi0deA="
 					},
@@ -35213,7 +35213,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFivqHXLYDavKQ="
 					},
-					"name": "product not found",
+					"title": "product not found",
 					"source": {
 						"$ref": "AAAAAAFi4lJ7hgi0deA="
 					},
@@ -35454,7 +35454,7 @@
 			"_parent": {
 				"$ref": "AAAAAAFF+h6SjaM2Hec="
 			},
-			"name": "States",
+			"title": "States",
 			"ownedElements": [
 				{
 					"_type": "UMLStatechartDiagram",
@@ -35462,7 +35462,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFi4oIVFw19+wQ="
 					},
-					"name": "Two States",
+					"title": "Two States",
 					"visible": true,
 					"defaultDiagram": false,
 					"ownedViews": [
@@ -41144,7 +41144,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFi4oIVFw1+dQA="
 							},
-							"name": "rentable",
+							"title": "rentable",
 							"visibility": "public"
 						},
 						{
@@ -41153,7 +41153,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFi4oIVFw1+dQA="
 							},
-							"name": "lent",
+							"title": "lent",
 							"visibility": "public"
 						},
 						{
@@ -41162,7 +41162,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFi4oIVFw1+dQA="
 							},
-							"name": "lost",
+							"title": "lost",
 							"visibility": "public"
 						},
 						{
@@ -41171,7 +41171,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFi4oIVFw1+dQA="
 							},
-							"name": "defect",
+							"title": "defect",
 							"visibility": "public"
 						},
 						{
@@ -41180,7 +41180,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFi4oIVFw1+dQA="
 							},
-							"name": "sorted out",
+							"title": "sorted out",
 							"visibility": "public"
 						},
 						{
@@ -41215,7 +41215,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFi4oIVFw1+dQA="
 							},
-							"name": "free for reservation",
+							"title": "free for reservation",
 							"visibility": "public"
 						},
 						{
@@ -41224,7 +41224,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFi4oIVFw1+dQA="
 							},
-							"name": "reserved",
+							"title": "reserved",
 							"visibility": "public"
 						},
 						{
@@ -41233,7 +41233,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFi4oIVFw1+dQA="
 							},
-							"name": "pre-paid",
+							"title": "pre-paid",
 							"visibility": "public"
 						},
 						{
@@ -41242,7 +41242,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFi4oIVFw1+dQA="
 							},
-							"name": "unpaid",
+							"title": "unpaid",
 							"visibility": "public"
 						},
 						{
@@ -41251,7 +41251,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFi4oIVFw1+dQA="
 							},
-							"name": "lent & returned",
+							"title": "lent & returned",
 							"visibility": "public"
 						},
 						{
@@ -41260,7 +41260,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFi4oIVFw1+dQA="
 							},
-							"name": "was paid for",
+							"title": "was paid for",
 							"visibility": "public"
 						}
 					],
