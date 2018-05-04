@@ -49,9 +49,10 @@ public class Product implements EntityIntf {
      * @param id    if product id is null, an id is generated for the new product object.
      * @param title product.
      */
-    public Product(String id, String title) {
+    public Product(String id, String title, String publisher) {
         this.id = id == null ? IDG.nextId() : id;
         this.title = title;
+        this.publisher = publisher;
         this.notes.add(new LogEntry("Product record created."));
     }
 
