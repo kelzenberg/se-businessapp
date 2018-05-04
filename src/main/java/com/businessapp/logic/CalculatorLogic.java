@@ -131,7 +131,7 @@ class CalculatorLogic implements CalculatorLogicIntf {
                         String math = dsb.toString();
                         dsb.setLength(0);
                         appendBuffer(calculate(math).toString());
-                        view.writeSideArea(CalculatorLogicIntf.SIDEAREA.getValue() + math + "\n");
+                        view.writeSideArea(math + "\n");
                         break;
                     }
                 case K_VAT:
@@ -161,7 +161,7 @@ class CalculatorLogic implements CalculatorLogicIntf {
                     dsb.setLength(Math.max(0, dsb.length() - 1));
                     break;
                 case K_C:
-                    view.writeSideArea("");
+                    view.writeSideArea("0");
                     break;
                 case K_CE:
                     dsb.delete(0, dsb.length());
