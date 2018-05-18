@@ -46,9 +46,19 @@ class ProductDataMockImpl implements ProductDataIntf {
         String name = parent.getName();
         if (name.equals("Katalog")) {
             // Product list 1
-            Product hitchhiker = DS.newProduct("The Hitchhiker's Guide to the Galaxy","Buena Vista Pictures");
-            //DS.newProduct("Moritz Baumann").addContact("moritz@gmx.de");
+            Product hitchhiker = DS.newProduct("The Hitchhiker's Guide to the Galaxy", "Buena Vista Pictures");
             hitchhiker.addNote("");
+            DS.newProduct("Iron Man (2008)", "Marvel Studios");
+            DS.newProduct("The Incredible Hulk (2008)", "Marvel Studios");
+            DS.newProduct("Thor (2011)", "Marvel Studios");
+            DS.newProduct("Captain America: The First Avenger (2011)", "Marvel Studios");
+            DS.newProduct("Marvel's The Avengers (2012)", "Marvel Studios");
+            DS.newProduct("Guardians of the Galaxy (2014)", "Marvel Studios");
+            DS.newProduct("Ant-Man (2015)", "Marvel Studios");
+            DS.newProduct("Doctor Strange (2016)", "Marvel Studios");
+            DS.newProduct("Spider-Man: Homecoming (2017)", "Marvel Studios");
+            DS.newProduct("Black Panther (2018)", "Marvel Studios");
+            DS.newProduct("Captain Marvel (2019)", "Marvel Studios");
         }
     }
 
