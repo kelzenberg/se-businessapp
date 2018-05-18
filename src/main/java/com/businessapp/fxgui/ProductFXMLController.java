@@ -200,10 +200,10 @@ public class ProductFXMLController implements FXMLControllerIntf {
 						@Override public void updateItem( final String item, final boolean empty ) {
 							super.updateItem( item, empty );
 							int rowIdx = getIndex();
-							ObservableList<Product> cust = fxProduct_TableView.getItems();
+							ObservableList<Product> prod = fxProduct_TableView.getItems();
 
-							if( rowIdx >= 0 && rowIdx < cust.size() ) {
-								Product product = cust.get( rowIdx );
+							if( rowIdx >= 0 && rowIdx < prod.size() ) {
+								Product product = prod.get( rowIdx );
 								setGraphic( null );		// always clear, needed for refresh
 								if( product != null ) {
 									btn.getStyleClass().add( "tableview-product-column-notes-button" );

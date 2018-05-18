@@ -44,7 +44,7 @@ class ProductDataMockImpl implements ProductDataIntf {
     public void start() {
 
         String name = parent.getName();
-        if (name.equals("Katalog")) {
+        if (name.equals("Filmkatalog")) {
             // Product list 1
             Product hitchhiker = DS.newProduct("The Hitchhiker's Guide to the Galaxy", "Buena Vista Pictures");
             hitchhiker.addNote("");
