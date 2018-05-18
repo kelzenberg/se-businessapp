@@ -14,7 +14,7 @@ public class Product implements EntityIntf {
 
     private static final long serialVersionUID = 1L;
 
-    private static IDGen IDG = new IDGen("P.", IDGen.IDTYPE.AIRLINE, 6);
+    private static IDGen IDG = new IDGen("tt", IDGen.IDTYPE.NUM, 6);
 
     // Product states.
     public enum ProductStatus {
@@ -72,6 +72,10 @@ public class Product implements EntityIntf {
         return publisher;
     }
 
+    public ProductStatus getStatus() {
+        return status;
+    }
+
     public List<String> getNotesAsStringList() {
         List<String> res = new ArrayList<String>();
         for (LogEntry n : notes) {
@@ -84,26 +88,23 @@ public class Product implements EntityIntf {
         return notes;
     }
 
-    public ProductStatus getStatus() {
-        return status;
-    }
-
     public Product setTitle(String title) {
         this.title = title;
         return this;
     }
 
-    public void setPublisher(String publisher) {
+    public Product setPublisher(String publisher) {
         this.publisher = publisher;
-    }
-
-    public void addNote(String logStr) {
-        // TODO
+        return this;
     }
 
     public Product setStatus(ProductStatus status) {
         this.status = status;
         return this;
+    }
+
+    public void addNote(String logStr) {
+        // TODO
     }
 
 }
