@@ -5,31 +5,31 @@ import com.businessapp.ControllerIntf;
 import com.businessapp.persistence.GenericEntityContainer;
 import com.businessapp.persistence.PersistenceProviderIntf;
 import com.businessapp.pojos.Customer;
+import com.businessapp.pojos.Product;
 
 import java.io.IOException;
 import java.util.Collection;
-import java.util.HashMap;
 
-public class CustomerDataSource implements CustomerDataIntf {
+public class ProductDataSource implements ProductDataIntf {
 
-    private final GenericEntityContainer<Customer> customers;
+    private final GenericEntityContainer<Product> products;
     private PersistenceProviderIntf persistenceProvider = null;
     private Component parent;
 
     /**
      * Factory method that returns a CatalogItem data source. * @return new instance of data source.
      */
-    public static CustomerDataIntf getController(String name, PersistenceProviderIntf persistenceProvider) {
-        CustomerDataIntf cds = new CustomerDataSource(name);
-        cds.inject(persistenceProvider);
-        return cds;
+    public static ProductDataIntf getController(String name, PersistenceProviderIntf persistenceProvider) {
+        ProductDataIntf pds = new ProductDataSource(name);
+        pds.inject(persistenceProvider);
+        return pds;
     }
 
     /**
      * Private constructor.
      */
-    private CustomerDataSource(String name) {
-        this.customers = new GenericEntityContainer<Customer>(name, Customer.class);
+    private ProductDataSource(String name) {
+        this.products = new GenericEntityContainer<Product>(name, Product.class);
     }
 
     @Override
@@ -51,13 +51,13 @@ public class CustomerDataSource implements CustomerDataIntf {
                 /*
                  * Attempt to load container from persistent storage.
                  */
-                persistenceProvider.loadInto(customers.getId(), entity -> {
-                    this.customers.store((Customer) entity);
+                persistenceProvider.loadInto(products.getId(), entity -> {
+                    this.products.store((Product) entity);
                     return true;
                 });
             } catch (IOException e) {
                 System.out.print(", ");
-                System.err.print("No data: " + customers.getId());
+                System.err.print("No data: " + products.getId());
             }
         }
     }
@@ -67,38 +67,38 @@ public class CustomerDataSource implements CustomerDataIntf {
     }
 
     @Override
-    public Customer findCustomerById(String id) {
-        return customers.findById(id);
+    public Product findProductById(String id) {
+        return products.findById(id);
     }
 
     @Override
-    public Collection<Customer> findAllCustomers() {
-        return customers.findAll();
+    public Collection<Product> findAllProducts() {
+        return products.findAll();
     }
 
     @Override
-    public Customer newCustomer(String name) {
-        Customer c = new Customer(null, name);
-        customers.update(c);
+    public Product newProduct(String title, String publisher) {
+        Product p = new Product(null, title, publisher);
+        products.update(p);
         if (persistenceProvider != null) {
-            persistenceProvider.save(customers, customers.getId());
+            persistenceProvider.save(products, products.getId());
         }
-        return c;
+        return p;
     }
 
     @Override
-    public void updateCustomer(Customer c) {
-        customers.update(c);
+    public void updateProduct(Product p) {
+        products.update(p);
         if (persistenceProvider != null) {
-            persistenceProvider.save(customers, customers.getId());
+            persistenceProvider.save(products, products.getId());
         }
     }
 
     @Override
-    public void deleteCustomers(Collection<String> ids) {
-        customers.delete(ids);
+    public void deleteProducts(Collection<String> ids) {
+        products.delete(ids);
         if (persistenceProvider != null) {
-            persistenceProvider.save(customers, customers.getId());
+            persistenceProvider.save(products, products.getId());
         }
     }
 }

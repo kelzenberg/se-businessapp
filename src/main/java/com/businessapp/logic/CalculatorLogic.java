@@ -175,7 +175,7 @@ class CalculatorLogic implements CalculatorLogicIntf {
         } catch (ArithmeticException e) {
             view.writeTextArea(e.getMessage());
         }
-        System.out.println("Buffer reads: [" + dsb.toString() + "]");
+        //System.out.println("Buffer reads: [" + dsb.toString() + "]");
     }
 
     /*
