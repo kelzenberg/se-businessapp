@@ -29,7 +29,7 @@ public class App extends Application {
 	private static App _app = null;
 
     PersistenceProviderIntf persistenceProvider
-            = PersistenceProviderFactory.getPersistenceProvider( "JavaSerialization" );
+            = PersistenceProviderFactory.getPersistenceProvider( "json" ); // alternative: "JavaSerialization"
 
 	/*
 	 * List of App components in order of appearance on the main GUI/TabPanel.

@@ -3,7 +3,7 @@ package com.businessapp.persistence;
 
 /**
  * Factory for persistence providers.
- * 
+ *
  */
 public class PersistenceProviderFactory {
 	public static String DEFAULT_PROVIDER_NAME = DefaultProvider.class.getName();
@@ -29,8 +29,7 @@ public class PersistenceProviderFactory {
 
 			} else {
 				if( selector.toLowerCase().matches( "(.*)json(.*)" ) ) {
-// JSON					_provider = JSONPersistenceProvider.getProvider();
-
+	                _provider = JSONPersistenceProvider.getProvider();
 				} else {
 					if( selector.toLowerCase().matches( "(.*)jdbc(.*)" ) ) {
 // JDBC					_provider = JDBCPersistenceProvider.getProvider();
