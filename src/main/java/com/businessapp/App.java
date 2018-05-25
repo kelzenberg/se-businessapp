@@ -39,7 +39,6 @@ public class App extends Application {
 				new Component(	"Kundenliste_2","Customer.fxml",		CustomerDataIntf.getController() ),
 				new Component(	"Studenten","Customer.fxml",		CustomerDataIntf.getController() ),
 				new Component(	"Filmkatalog","Product.fxml",		ProductDataIntf.getController() )
-				//new Component( "Katalog",		"Catalog.fxml",			CatalogDataIntf.getController() ),
 		));
 
 	public static App getInstance() {
