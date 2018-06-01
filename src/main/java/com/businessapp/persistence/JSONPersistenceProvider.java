@@ -11,7 +11,7 @@ import com.fasterxml.jackson.databind.node.ArrayNode;
 
 import com.businessapp.Component;
 import com.businessapp.ControllerIntf;
-//*@@*/import com.businessapp.persistence.dto.JSONMapper;
+import com.businessapp.persistence.dto.JSONMapper;
 import com.businessapp.pojos.EntityIntf;
 
 
@@ -102,7 +102,7 @@ class JSONPersistenceProvider implements PersistenceProviderIntf {
 			 *	@JsonGetter("entities")
 			 */
 			JSONWrapper wrapper = new JSONWrapper( container, e -> {
-//*@@*/				e = JSONMapper.map( e );
+				e = JSONMapper.map( e );
 				return e;
 			});
 			path = dataPath + path + ".json";
@@ -142,12 +142,12 @@ class JSONPersistenceProvider implements PersistenceProviderIntf {
 			ArrayNode an = (ArrayNode)n.get( "entities" );
 
 			Class<?> cls = Class.forName( clsName );
-//*@@*/		cls = JSONMapper.map( cls );
+			cls = JSONMapper.map( cls );
 
 			for( JsonNode en : an ) {
 				Object e = mapper.treeToValue( en , cls );
 				if( e instanceof EntityIntf ) {
-//*@@*/					e = JSONMapper.map( (EntityIntf) e );
+					e = JSONMapper.map( (EntityIntf) e );
 				}
 				collector.call( (Serializable)e );
 			}
