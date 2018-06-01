@@ -63,6 +63,7 @@ public class JSONMapper {
 			e = new CustomerJSON( (Customer)e );
 
 		} else if( e instanceof Product ) {
+			System.out.println( " [map Product -> ProductJSON: " + e.getId() + "] " );
 			e = new ProductJSON( (Product)e );
 		}
 		return e;
@@ -76,6 +77,7 @@ public class JSONMapper {
 			e = ((CustomerJSON)djo).getCustomer();
 
 		} else if( djo instanceof ProductJSON ) {
+			System.err.println( " [map ProductJSON -> Product: " + djo.getId() + "] " );
 			e = ((ProductJSON)djo).getProduct();
 		}
 		return e;

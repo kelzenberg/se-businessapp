@@ -42,7 +42,7 @@ public class Component {
 	 * @param fxmlResource to load FXML and create fxmlController
 	 * @param logic controller provided
 	 */
-	Component( String name, String fxmlResource, ControllerIntf logic ) {
+	public Component( String name, String fxmlResource, ControllerIntf logic ) {
 		this.name = name;
 		this.fxmlResource = fxmlResource;
 		this.fxmlController = new ProxyController();

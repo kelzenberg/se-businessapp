@@ -56,8 +56,13 @@ public class CustomerDataSource implements CustomerDataIntf {
                     return true;
                 });
             } catch (IOException e) {
-                System.out.print(", ");
-                System.err.print("No data: " + customers.getId());
+                CustomerDataIntf mockDS = new CustomerDataMockImpl();
+                Component parent = new Component( customers.getId(), null, null ); mockDS.inject( parent );
+                mockDS.start();
+                for( Customer mockCustomer : mockDS.findAllCustomers() ) {
+                    customers.update( mockCustomer );
+                }
+                persistenceProvider.save( customers, customers.getId() );
             }
         }
     }

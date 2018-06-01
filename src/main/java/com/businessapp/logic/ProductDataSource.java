@@ -4,7 +4,6 @@ import com.businessapp.Component;
 import com.businessapp.ControllerIntf;
 import com.businessapp.persistence.GenericEntityContainer;
 import com.businessapp.persistence.PersistenceProviderIntf;
-import com.businessapp.pojos.Customer;
 import com.businessapp.pojos.Product;
 
 import java.io.IOException;
@@ -56,8 +55,13 @@ public class ProductDataSource implements ProductDataIntf {
                     return true;
                 });
             } catch (IOException e) {
-                System.out.print(", ");
-                System.err.print("No data: " + products.getId());
+                ProductDataIntf mockDS = new ProductDataMockImpl();
+                Component parent = new Component( products.getId(), null, null ); mockDS.inject( parent );
+                mockDS.start();
+                for( Product mockProduct : mockDS.findAllProducts() ) {
+                    products.update( mockProduct );
+                }
+                persistenceProvider.save( products, products.getId() );
             }
         }
     }
