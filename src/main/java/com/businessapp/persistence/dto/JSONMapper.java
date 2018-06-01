@@ -4,6 +4,7 @@ import java.util.HashMap;
 
 import com.businessapp.pojos.Customer;
 import com.businessapp.pojos.EntityIntf;
+import com.businessapp.pojos.Product;
 
 
 /**
@@ -24,6 +25,7 @@ public class JSONMapper {
 	private JSONMapper() {
 		classMapper = new HashMap<Class<? extends EntityIntf>,Class<? extends JSONIntf>>();
 		classMapper.put( Customer.class, CustomerJSON.class );
+		classMapper.put( Product.class, ProductJSON.class );
 	}
 
 	/**
@@ -57,12 +59,12 @@ public class JSONMapper {
 	 */
 	private EntityIntf mapIn( EntityIntf e ) {
 		if( e instanceof Customer ) {
-			//System.out.println( " [map Customer -> CustomerJSON: " + e.getId() + "] " );
+			System.out.println( " [map Customer -> CustomerJSON: " + e.getId() + "] " );
 			e = new CustomerJSON( (Customer)e );
 
-		}// else if( e instanceof CatalogItem ) {
-			//e = new CatalogItemJSON( (CatalogItem)e );
-		//}
+		} else if( e instanceof Product ) {
+			e = new ProductJSON( (Product)e );
+		}
 		return e;
 	}
 
@@ -70,12 +72,12 @@ public class JSONMapper {
 		EntityIntf e = null;
 
 		if( djo instanceof CustomerJSON ) {
-			//System.err.println( " [map CustomerJSON -> Customer: " + djo.getId() + "] " );
+			System.err.println( " [map CustomerJSON -> Customer: " + djo.getId() + "] " );
 			e = ((CustomerJSON)djo).getCustomer();
 
-		}// else if( djo instanceof CatalogItemJSON ) {
-			//e = ((CatalogItemJSON)djo).getCatalogItem();
-		//}
+		} else if( djo instanceof ProductJSON ) {
+			e = ((ProductJSON)djo).getProduct();
+		}
 		return e;
 	}
 
