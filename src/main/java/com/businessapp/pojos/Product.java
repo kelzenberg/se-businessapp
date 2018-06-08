@@ -7,7 +7,7 @@ import java.util.List;
 
 
 /**
- * Product is an entity that represents a person (or a business)
+ * Product is an entity that represents a product
  * to which a business activity can be associated.
  */
 public class Product implements EntityIntf {
