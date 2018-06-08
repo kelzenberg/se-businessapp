@@ -69,7 +69,6 @@ public class Rental implements EntityIntf {
         this.productId = productId;
     }
 
-
     /**
      * Public getter/setter methods.
      */
@@ -142,12 +141,17 @@ public class Rental implements EntityIntf {
         return this;
     }
 
-    public HashMap<String, Rental> addRentalRef(Rental rentalRef) {
-        if (rentalRef != null) {
-            rentalRefs.put(rentalRef.getId(),rentalRef);
-            return rentalRefs;
+    public Rental addRentalRef(Rental rental) {
+        if (rental != null) {
+            rentalRefs.put(rental.getId(),rental);
+            rental.setRentalRefs(this.rentalRefs);
         }
-        return null;
+        return this;
+    }
+
+    public Rental setRentalRefs(HashMap<String, Rental> rentalRefs) {
+        this.rentalRefs = rentalRefs;
+        return this;
     }
 
     public Rental setStatus(RentalStatus status) {

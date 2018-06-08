@@ -48,7 +48,8 @@ class RentalDataMockImpl implements RentalDataIntf {
         if (name.equals("Ausleihe")) {
             // Rental list 1
             Rental rental1 = DS.newRental(null,"C.GEMJAQ","tt592510");
-            DS.newRental(null, "C.GEMJAQ","tt191614");
+            Rental rental2 = DS.newRental(null, "C.GEMJAQ","tt191614");
+            rental1.addRentalRef(rental2);
             DS.newRental(null, "C.2KTAAA", "tt242787");
         }
     }
