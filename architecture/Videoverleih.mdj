@@ -27113,24 +27113,7 @@
 											"top": 163,
 											"width": 182.4443359375,
 											"height": 13,
-											"text": "-rentedFor: Date",
-											"horizontalAlignment": 0
-										},
-										{
-											"_type": "UMLAttributeView",
-											"_id": "AAAAAAFj3rglvncs6kA=",
-											"_parent": {
-												"$ref": "AAAAAAFj3rNv3HUeFSA="
-											},
-											"model": {
-												"$ref": "AAAAAAFj3rgloncpMEw="
-											},
-											"font": "Arial;13;0",
-											"left": 165,
-											"top": 178,
-											"width": 182.4443359375,
-											"height": 13,
-											"text": "-isPaid: Boolean",
+											"text": "-rentedUntil: Date",
 											"horizontalAlignment": 0
 										},
 										{
@@ -27144,7 +27127,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 165,
-											"top": 193,
+											"top": 178,
 											"width": 182.4443359375,
 											"height": 13,
 											"text": "-returnedOn: Date",
@@ -27152,19 +27135,19 @@
 										},
 										{
 											"_type": "UMLAttributeView",
-											"_id": "AAAAAAFj3sFgKHlvnUE=",
+											"_id": "AAAAAAFj3rglvncs6kA=",
 											"_parent": {
 												"$ref": "AAAAAAFj3rNv3HUeFSA="
 											},
 											"model": {
-												"$ref": "AAAAAAFj3sFgDHlsqp0="
+												"$ref": "AAAAAAFj3rgloncpMEw="
 											},
 											"font": "Arial;13;0",
 											"left": 165,
-											"top": 208,
+											"top": 193,
 											"width": 182.4443359375,
 											"height": 13,
-											"text": "-overdue: Date",
+											"text": "-isPaid: Boolean",
 											"horizontalAlignment": 0
 										},
 										{
@@ -27178,7 +27161,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 165,
-											"top": 223,
+											"top": 208,
 											"width": 182.4443359375,
 											"height": 13,
 											"text": "-customerId: String",
@@ -27195,7 +27178,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 165,
-											"top": 238,
+											"top": 223,
 											"width": 182.4443359375,
 											"height": 13,
 											"text": "-productId: String",
@@ -27212,7 +27195,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 165,
-											"top": 253,
+											"top": 238,
 											"width": 182.4443359375,
 											"height": 13,
 											"text": "-rentalRefs: ArrayList<Rental>",
@@ -27223,7 +27206,7 @@
 									"left": 160,
 									"top": 113,
 									"width": 192.4443359375,
-									"height": 158
+									"height": 143
 								},
 								{
 									"_type": "UMLOperationCompartmentView",
@@ -27246,7 +27229,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 165,
-											"top": 276,
+											"top": 261,
 											"width": 182.4443359375,
 											"height": 13,
 											"text": "+rental()",
@@ -27263,7 +27246,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 165,
-											"top": 291,
+											"top": 276,
 											"width": 182.4443359375,
 											"height": 13,
 											"text": "+getId()",
@@ -27280,7 +27263,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 165,
-											"top": 306,
+											"top": 291,
 											"width": 182.4443359375,
 											"height": 13,
 											"text": "+getReservedOn()",
@@ -27297,7 +27280,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 165,
-											"top": 321,
+											"top": 306,
 											"width": 182.4443359375,
 											"height": 13,
 											"text": "+getPickedUpOn()",
@@ -27314,10 +27297,27 @@
 											},
 											"font": "Arial;13;0",
 											"left": 165,
+											"top": 321,
+											"width": 182.4443359375,
+											"height": 13,
+											"text": "+getRentedUntil()",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAFj3soFu30eshI=",
+											"_parent": {
+												"$ref": "AAAAAAFj3rNv3HUf92w="
+											},
+											"model": {
+												"$ref": "AAAAAAFj3soFhX0b1b0="
+											},
+											"font": "Arial;13;0",
+											"left": 165,
 											"top": 336,
 											"width": 182.4443359375,
 											"height": 13,
-											"text": "+getRentedFor()",
+											"text": "+getReturnedOn()",
 											"horizontalAlignment": 0
 										},
 										{
@@ -27339,40 +27339,6 @@
 										},
 										{
 											"_type": "UMLOperationView",
-											"_id": "AAAAAAFj3soFu30eshI=",
-											"_parent": {
-												"$ref": "AAAAAAFj3rNv3HUf92w="
-											},
-											"model": {
-												"$ref": "AAAAAAFj3soFhX0b1b0="
-											},
-											"font": "Arial;13;0",
-											"left": 165,
-											"top": 366,
-											"width": 182.4443359375,
-											"height": 13,
-											"text": "+getReturnedOn()",
-											"horizontalAlignment": 0
-										},
-										{
-											"_type": "UMLOperationView",
-											"_id": "AAAAAAFj3spovX068+I=",
-											"_parent": {
-												"$ref": "AAAAAAFj3rNv3HUf92w="
-											},
-											"model": {
-												"$ref": "AAAAAAFj3sponX03Gnk="
-											},
-											"font": "Arial;13;0",
-											"left": 165,
-											"top": 381,
-											"width": 182.4443359375,
-											"height": 13,
-											"text": "+getOverdue()",
-											"horizontalAlignment": 0
-										},
-										{
-											"_type": "UMLOperationView",
 											"_id": "AAAAAAFj3sqMTn1WrjQ=",
 											"_parent": {
 												"$ref": "AAAAAAFj3rNv3HUf92w="
@@ -27382,7 +27348,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 165,
-											"top": 396,
+											"top": 366,
 											"width": 182.4443359375,
 											"height": 13,
 											"text": "+getCustomerId()",
@@ -27399,7 +27365,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 165,
-											"top": 411,
+											"top": 381,
 											"width": 182.4443359375,
 											"height": 13,
 											"text": "+getProductId()",
@@ -27416,7 +27382,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 165,
-											"top": 426,
+											"top": 396,
 											"width": 182.4443359375,
 											"height": 13,
 											"text": "+getRentalRefs()",
@@ -27433,7 +27399,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 165,
-											"top": 441,
+											"top": 411,
 											"width": 182.4443359375,
 											"height": 13,
 											"text": "+setPickedUpOn(date: Date)",
@@ -27450,27 +27416,10 @@
 											},
 											"font": "Arial;13;0",
 											"left": 165,
-											"top": 456,
+											"top": 426,
 											"width": 182.4443359375,
 											"height": 13,
-											"text": "+setRentedFor(amount: Date)",
-											"horizontalAlignment": 0
-										},
-										{
-											"_type": "UMLOperationView",
-											"_id": "AAAAAAFj3swMsH3sGlQ=",
-											"_parent": {
-												"$ref": "AAAAAAFj3rNv3HUf92w="
-											},
-											"model": {
-												"$ref": "AAAAAAFj3swMiX3pe5o="
-											},
-											"font": "Arial;13;0",
-											"left": 165,
-											"top": 471,
-											"width": 182.4443359375,
-											"height": 13,
-											"text": "+setIsPaid(status: Boolean)",
+											"text": "+setRentedUntil(amount: Date)",
 											"horizontalAlignment": 0
 										},
 										{
@@ -27484,10 +27433,27 @@
 											},
 											"font": "Arial;13;0",
 											"left": 165,
-											"top": 486,
+											"top": 441,
 											"width": 182.4443359375,
 											"height": 13,
 											"text": "+setReturnedOn(date: Date)",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAFj3swMsH3sGlQ=",
+											"_parent": {
+												"$ref": "AAAAAAFj3rNv3HUf92w="
+											},
+											"model": {
+												"$ref": "AAAAAAFj3swMiX3pe5o="
+											},
+											"font": "Arial;13;0",
+											"left": 165,
+											"top": 456,
+											"width": 182.4443359375,
+											"height": 13,
+											"text": "+setIsPaid(status: Boolean)",
 											"horizontalAlignment": 0
 										},
 										{
@@ -27501,7 +27467,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 165,
-											"top": 501,
+											"top": 471,
 											"width": 182.4443359375,
 											"height": 13,
 											"text": "+addRentalRef(rental: Rental)",
@@ -27510,9 +27476,9 @@
 									],
 									"font": "Arial;13;0",
 									"left": 160,
-									"top": 271,
+									"top": 256,
 									"width": 192.4443359375,
-									"height": 248
+									"height": 233
 								},
 								{
 									"_type": "UMLReceptionCompartmentView",
@@ -27552,7 +27518,7 @@
 							"left": 160,
 							"top": 88,
 							"width": 192.4443359375,
-							"height": 431,
+							"height": 401,
 							"nameCompartment": {
 								"$ref": "AAAAAAFj3rNv23UZylA="
 							},
@@ -27969,19 +27935,9 @@
 							"_parent": {
 								"$ref": "AAAAAAFj3rNv23UTn+s="
 							},
-							"name": "rentedFor",
+							"name": "rentedUntil",
 							"visibility": "private",
 							"type": "Date"
-						},
-						{
-							"_type": "UMLAttribute",
-							"_id": "AAAAAAFj3rgloncpMEw=",
-							"_parent": {
-								"$ref": "AAAAAAFj3rNv23UTn+s="
-							},
-							"name": "isPaid",
-							"visibility": "private",
-							"type": "Boolean"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -27995,13 +27951,13 @@
 						},
 						{
 							"_type": "UMLAttribute",
-							"_id": "AAAAAAFj3sFgDHlsqp0=",
+							"_id": "AAAAAAFj3rgloncpMEw=",
 							"_parent": {
 								"$ref": "AAAAAAFj3rNv23UTn+s="
 							},
-							"name": "overdue",
+							"name": "isPaid",
 							"visibility": "private",
-							"type": "Date"
+							"type": "Boolean"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -28073,15 +28029,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFj3rNv23UTn+s="
 							},
-							"name": "getRentedFor"
-						},
-						{
-							"_type": "UMLOperation",
-							"_id": "AAAAAAFj3smbf3z/Ga0=",
-							"_parent": {
-								"$ref": "AAAAAAFj3rNv23UTn+s="
-							},
-							"name": "getIsPaid"
+							"name": "getRentedUntil"
 						},
 						{
 							"_type": "UMLOperation",
@@ -28093,11 +28041,11 @@
 						},
 						{
 							"_type": "UMLOperation",
-							"_id": "AAAAAAFj3sponX03Gnk=",
+							"_id": "AAAAAAFj3smbf3z/Ga0=",
 							"_parent": {
 								"$ref": "AAAAAAFj3rNv23UTn+s="
 							},
-							"name": "getOverdue"
+							"name": "getIsPaid"
 						},
 						{
 							"_type": "UMLOperation",
@@ -28148,7 +28096,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFj3rNv23UTn+s="
 							},
-							"name": "setRentedFor",
+							"name": "setRentedUntil",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
@@ -28157,6 +28105,25 @@
 										"$ref": "AAAAAAFj3su/u33IheA="
 									},
 									"name": "amount",
+									"type": "Date"
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAFj3syeNH4K38A=",
+							"_parent": {
+								"$ref": "AAAAAAFj3rNv23UTn+s="
+							},
+							"name": "setReturnedOn",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAFj3s0GOn4gF+o=",
+									"_parent": {
+										"$ref": "AAAAAAFj3syeNH4K38A="
+									},
+									"name": "date",
 									"type": "Date"
 								}
 							]
@@ -28177,25 +28144,6 @@
 									},
 									"name": "status",
 									"type": "Boolean"
-								}
-							]
-						},
-						{
-							"_type": "UMLOperation",
-							"_id": "AAAAAAFj3syeNH4K38A=",
-							"_parent": {
-								"$ref": "AAAAAAFj3rNv23UTn+s="
-							},
-							"name": "setReturnedOn",
-							"parameters": [
-								{
-									"_type": "UMLParameter",
-									"_id": "AAAAAAFj3s0GOn4gF+o=",
-									"_parent": {
-										"$ref": "AAAAAAFj3syeNH4K38A="
-									},
-									"name": "date",
-									"type": "Date"
 								}
 							]
 						},
