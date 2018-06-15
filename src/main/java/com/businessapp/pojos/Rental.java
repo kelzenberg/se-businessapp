@@ -28,13 +28,13 @@ public class Rental implements EntityIntf {
      */
     private String id = null;
 
-    private LocalDateTime reservedOn = null;
+    private LocalDateTime reservedOn = LocalDateTime.of(1970,1,1,1,1,1);
 
-    private LocalDateTime pickedUpOn = null;
+    private LocalDateTime pickedUpOn = LocalDateTime.of(1970,1,1,1,1,1);
 
-    private LocalDateTime rentedUntil = null;
+    private LocalDateTime rentedUntil = LocalDateTime.of(1970,1,1,1,1,1);
 
-    private LocalDateTime returnedOn = null;
+    private LocalDateTime returnedOn = LocalDateTime.of(1970,1,1,1,1,1);
 
     private Boolean isPaid = false;
 
@@ -42,7 +42,7 @@ public class Rental implements EntityIntf {
 
     private String productId = null;
 
-    private HashMap<String, Rental> rentalRefs = new HashMap<String, Rental>();
+    //private HashMap<String, Rental> rentalRefs = new HashMap<String, Rental>();
 
     private RentalStatus status = RentalStatus.ACTIVE;
 
@@ -57,10 +57,10 @@ public class Rental implements EntityIntf {
     /**
      * Public constructor.
      *
-     * @param id    if rental id is null, an id is generated for the new rental object.
+     * @param id         if rental id is null, an id is generated for the new rental object.
      * @param reservedOn if reservedOn is null, local date time (time of creation) will be used
      * @param customerId customerId of customer<>product association
-     * @param productId productId of customer<>product association
+     * @param productId  productId of customer<>product association
      */
     public Rental(String id, LocalDateTime reservedOn, String customerId, String productId) {
         this.id = id == null ? IDG.nextId() : id;
@@ -105,9 +105,9 @@ public class Rental implements EntityIntf {
         return productId;
     }
 
-    public HashMap<String, Rental> getRentalRefs() {
+    /*public HashMap<String, Rental> getRentalRefs() {
         return rentalRefs;
-    }
+    }*/
 
     public RentalStatus getStatus() {
         return status;
@@ -120,7 +120,7 @@ public class Rental implements EntityIntf {
     public Rental setPickedUpOn(LocalDateTime pickedUpOn) {
         this.pickedUpOn = pickedUpOn;
         // when pickup happened before creation of rental object (e.g. rental got added later)
-        if (pickedUpOn.isBefore(reservedOn)){
+        if (pickedUpOn.isBefore(reservedOn)) {
             reservedOn = pickedUpOn;
         }
         return this;
@@ -141,10 +141,10 @@ public class Rental implements EntityIntf {
         return this;
     }
 
-    public Rental addRentalRef(Rental rental) {
+    /*public Rental addRentalRef(Rental rental) {
         if (rental != null) {
-            rentalRefs.put(rental.getId(),rental);
-            rental.setRentalRefs(this.rentalRefs);
+            rentalRefs.put(rental.getId(), rental);
+            //rental.setRentalRefs(this.rentalRefs);
         }
         return this;
     }
@@ -152,7 +152,7 @@ public class Rental implements EntityIntf {
     public Rental setRentalRefs(HashMap<String, Rental> rentalRefs) {
         this.rentalRefs = rentalRefs;
         return this;
-    }
+    }*/
 
     public Rental setStatus(RentalStatus status) {
         this.status = status;

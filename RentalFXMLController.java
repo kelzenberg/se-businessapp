@@ -63,17 +63,17 @@ public class RentalFXMLController implements FXMLControllerIntf {
 	 * TableView model.
 	 */
 	private final ObservableList<Rental> cellDataObservable = FXCollections.observableArrayList();
-	//private StringBuilder rentalRefsIds = new StringBuilder();
+	private StringBuilder rentalRefsIds = new StringBuilder();
 
 	private final String LABEL_ID		= "ID";
-	private final String LABEL_PRODUCTID		= "Product ID";
+	private final String LABEL_PRODUCTID		= "Rental ID";
 	private final String LABEL_CUSTOMERID		= "Customer ID";
 	private final String LABEL_RESERVEDON	= "Reserved on";
 	private final String LABEL_PICKEDUPON= "Picked up on";
 	private final String LABEL_RENTEDUNTIL	= "Rented until";
 	private final String LABEL_RETURNEDON	= "Returned on";
 	private final String LABEL_PAID	= "Payment";
-	//private final String LABEL_REFS	= "Linked Rentals";
+	private final String LABEL_REFS	= "Linked Rentals";
 	private final String LABEL_STATUS	= "Status";
 
 
@@ -166,7 +166,7 @@ public class RentalFXMLController implements FXMLControllerIntf {
 			observable.set( r.getCustomerId() );
 			return observable;
 		});
-
+		/*
 		TableColumn<Rental,String> tableCol_RESERVEDON = new TableColumn<>( LABEL_RESERVEDON );
 		tableCol_RESERVEDON.getStyleClass().add( "tableview-rental-column-title" );
 		tableCol_RESERVEDON.setCellValueFactory( cellData -> {
@@ -215,7 +215,7 @@ public class RentalFXMLController implements FXMLControllerIntf {
 			}
 			return observable;
 		});
-		/*
+
 		TableColumn<Rental,String> tableCol_REFS = new TableColumn<>( LABEL_REFS );
 		tableCol_REFS.getStyleClass().add( "tableview-rental-column-title" );
 		tableCol_REFS.setCellValueFactory( cellData -> {
@@ -228,7 +228,7 @@ public class RentalFXMLController implements FXMLControllerIntf {
 			observable.set( rentalRefsIds.toString().trim() );
 			return observable;
 		});
-		*/
+
 		TableColumn<Rental,String> tableCol_STATUS = new TableColumn<>( LABEL_STATUS );
 		tableCol_STATUS.getStyleClass().add( "tableview-rental-column-status" );
 		tableCol_STATUS.setCellValueFactory( cellData -> {
@@ -310,14 +310,15 @@ public class RentalFXMLController implements FXMLControllerIntf {
 		fxRental_TableView.getColumns().addAll( Arrays.asList(
 			fxRental_TableCol_ID,
 			tableCol_PRODUCTID,
-			tableCol_CUSTOMERID,
+			tableCol_CUSTOMERID/*,
+
 			tableCol_RESERVEDON,
 			tableCol_PICKEDUPON,
 			tableCol_RENTEDUNTIL,
 			tableCol_RETURNEDON,
 			tableCol_PAID,
-			//tableCol_REFS,
-			tableCol_STATUS
+			tableCol_REFS,
+			tableCol_STATUS */
 
 		));
 
@@ -423,7 +424,7 @@ public class RentalFXMLController implements FXMLControllerIntf {
 			new StringTestUpdateProperty( LABEL_RENTEDUNTIL, r.getRentedUntil().toString(), true ),
 			new StringTestUpdateProperty( LABEL_RETURNEDON, r.getReturnedOn().toString(), true ),
 			new StringTestUpdateProperty( LABEL_PAID, r.getPaid().toString(), true ),
-			//new StringTestUpdateProperty( LABEL_REFS, rentalRefsIds.toString(), false ),
+			new StringTestUpdateProperty( LABEL_REFS, rentalRefsIds.toString(), false ),
 			new StringTestUpdateProperty( LABEL_STATUS, r.getStatus().name(), true )
 		));
 

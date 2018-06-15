@@ -30,14 +30,14 @@
 	-fx-alignment: CENTER;
 	-fx-padding: 1 0 1 0;	/* top, right, bottom, left */
 }
-
+/*
 .tableview-rental-column-paid {
 	-fx-pref-width: 48px;
 }
 .tableview-rental-column-paid.table-cell {
 	-fx-alignment: CENTER;
 	-fx-background-color: #E8F5E9;
-	-fx-padding: 1 0 1 0;	/* top, right, bottom, left */
+	-fx-padding: 1 0 1 0;	/* top, right, bottom, left *
 }
 
 .tableview-rental-column-notpaid {
@@ -46,8 +46,8 @@
 .tableview-rental-column-notpaid.table-cell {
 	-fx-alignment: CENTER;
 	-fx-background-color: #FFEBEE;
-	-fx-padding: 1 0 1 0;	/* top, right, bottom, left */
-}
+	-fx-padding: 1 0 1 0;	/* top, right, bottom, left *
+}*/
 
 .tableview-rental-column-notes {
 	-fx-pref-width: 64px;
