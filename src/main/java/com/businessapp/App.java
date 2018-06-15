@@ -41,7 +41,8 @@ public class App extends Application {
                 new Component(  "Kunden", 		"Customer.fxml", 	CustomerDataSource.getController( "Kunden", persistenceProvider ) ),
 				new Component(	"Kundenliste_2","Customer.fxml",	CustomerDataSource.getController( "Kunden_2", persistenceProvider ) ),
 				new Component(	"Studenten",	"Customer.fxml",		CustomerDataIntf.getController() ),
-				new Component(	"Filmkatalog",	"Product.fxml", 		ProductDataSource.getController( "Filmkatalog", persistenceProvider ) )
+				new Component(	"Filmkatalog",	"Product.fxml", 		ProductDataSource.getController( "Filmkatalog", persistenceProvider ) ),
+				new Component(	"Ausleihe",	"Rental.fxml", 		RentalDataSource.getController( "Ausleihe", persistenceProvider ) )
 		));
 
 	public static App getInstance() {

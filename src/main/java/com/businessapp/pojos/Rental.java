@@ -36,7 +36,7 @@ public class Rental implements EntityIntf {
 
     private LocalDateTime returnedOn = null;
 
-    private Boolean isPaid = null;
+    private Boolean isPaid = false;
 
     private String customerId = null;
 

@@ -23,14 +23,14 @@ public interface RentalDataIntf extends ControllerIntf {
 	/**
 	 * Public access methods to Rental data.
 	 */
-	Rental findRentalById(String id);
+	Rental findRentalById(String id); // READ
 
-	public Collection<Rental> findAllRentals();
+	public Collection<Rental> findAllRentals(); // READ
 
-	public Rental newRental(LocalDateTime reservedOn, String customerId, String productId);
+	public Rental newRental(LocalDateTime reservedOn, String customerId, String productId); // CREATE
 
-	public void updateRental(Rental r);
+	public void updateRental(Rental r); // UPDATE
 
-	public void deleteRentals(Collection<String> ids);
+	public void deleteRentals(Collection<String> ids); // DELETE
 
 }
