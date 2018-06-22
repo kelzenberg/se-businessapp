@@ -22,7 +22,7 @@ class CustomerJSON extends Customer implements JSONIntf {
 	 * Required by JSON de-serialization.
 	 */
 	private CustomerJSON() {
-		super( null, null );
+		super( null, null , null);
 		this.getNotes().clear();
 	}
 
@@ -32,7 +32,7 @@ class CustomerJSON extends Customer implements JSONIntf {
 	 * @param c copied Customer object.
 	 */
 	public CustomerJSON( Customer c ) {
-		super( c.getId(), c.getName() );
+		super( c.getId(), c.getFirstName(), c.getLastName());
 		for( String contact : c.getContacts() ) {
 			this.addContact( contact );
 		}
@@ -49,7 +49,7 @@ class CustomerJSON extends Customer implements JSONIntf {
 	 */
 	@JsonIgnore
 	public Customer getCustomer() {
-		Customer c = new Customer( this.getId(), this.getName() );
+		Customer c = new Customer( this.getId(), this.getFirstName(), this.getLastName() );
 		for( String contact : this.getContacts() ) {
 			c.addContact( contact );
 		}

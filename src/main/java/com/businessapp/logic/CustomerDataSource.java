@@ -82,8 +82,8 @@ public class CustomerDataSource implements CustomerDataIntf {
     }
 
     @Override
-    public Customer newCustomer(String name) {
-        Customer c = new Customer(null, name);
+    public Customer newCustomer(String firstName, String lastName) {
+        Customer c = new Customer(null, firstName, lastName);
         customers.update(c);
         if (persistenceProvider != null) {
             persistenceProvider.save(customers, customers.getId());

@@ -17,6 +17,8 @@ import java.util.List;
 class RentalJSON extends Product implements JSONIntf {
 	private static final long serialVersionUID = 1L;
 
+	// TODO: this
+
 	/**
 	 * Required by JSON de-serialization.
 	 */

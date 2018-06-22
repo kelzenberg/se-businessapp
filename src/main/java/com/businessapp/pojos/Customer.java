@@ -25,7 +25,9 @@ public class Customer implements EntityIntf  {
 	 */
 	private String id = null;
 
-	private String name = null;
+	private String firstName = null;
+
+	private String lastName = null;
 
 	private List<String> contacts = new ArrayList<String>();
 
@@ -45,9 +47,10 @@ public class Customer implements EntityIntf  {
 	 * @param id if customer id is null, an id is generated for the new customer object.
 	 * @param name customer.
 	 */
-	public Customer( String id, String name ) {
+	public Customer( String id, String firstName, String lastName) {
 		this.id = id==null? IDG.nextId() : id;
-		this.name = name;
+		this.firstName = firstName;
+		this.lastName = lastName;
 		this.notes.add( new LogEntry( "Customer record created." ) );
 	}
 
@@ -59,9 +62,11 @@ public class Customer implements EntityIntf  {
 		return id;
 	}
 
-	public String getName() {
-		return name;
+	public String getFirstName() {
+		return firstName;
 	}
+
+	public String getLastName() { return lastName; }
 
 	public List<String> getContacts() {
 		return contacts;
@@ -83,12 +88,17 @@ public class Customer implements EntityIntf  {
 		return status;
 	}
 
-	public Customer setName( String name ) {
-		this.name = name;
+	public Customer setFirstName( String firstName) {
+		this.firstName= firstName;
 		return this;
 	}
 
-	public Customer addContact( String contact ) {
+    public Customer setLastName(String lastName) {
+        this.lastName = lastName;
+        return this;
+    }
+
+    public Customer addContact(String contact ) {
 		contacts.add( contact );
 		return this;
 	}
